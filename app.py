@@ -2,9 +2,13 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 # 1 - Importando os Dados
-data = pd.read_csv("data\Pedidos.csv")
+# Caminho para o arquivo de dados
+data_path = os.path.join("data", "Pedidos.csv")
+# Ler o arquivo de dados
+data = pd.read_csv(data_path)
 df = pd.DataFrame(data)
 
 def main():
